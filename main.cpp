@@ -9,7 +9,7 @@
 bool keepalive = true;
 
 //Attempts to create a file with the provided filename
-void make_file(const std::string & file_name) {
+void make_file(const std::string &file_name) {
     //Create the file
     std::cout << "Creating file: " << file_name << std::endl;
     std::ofstream ofile(file_name);
@@ -27,7 +27,7 @@ void make_file(const std::string & file_name) {
 }
 
 //Attempts to remove a file with the provided filename
-void del_file(const std::string & file_name) {
+void del_file(const std::string &file_name) {
     //Verify that file exists
     std::ifstream origfile(file_name);
     if (!origfile.good()) {
@@ -51,7 +51,7 @@ void del_file(const std::string & file_name) {
 }
 
 //Runs the interval spam, creating and deleting files with a timed delay
-void generate_interval(const size_t & number_of_intervals, const size_t & time_delay_ms, const std::string & filename) {
+void generate_interval(const size_t &number_of_intervals, const size_t &time_delay_ms, const std::string &filename) {
     //Spit out data
     std::cout << "Running interval spam " << std::endl;
     std::cout << "Filename: " << filename << std::endl;
@@ -72,7 +72,7 @@ void generate_interval(const size_t & number_of_intervals, const size_t & time_d
 }
 
 //Processes commands received from the command line
-void process_command(const std::string & command) {
+void process_command(const std::string &command) {
     if (command == "help") {
         std::cout << "help        -> Prints the help menu" << std::endl;
         std::cout << "make        -> creates a file" << std::endl;
