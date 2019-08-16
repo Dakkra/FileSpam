@@ -10,6 +10,7 @@
 bool keepalive = true;
 std::unordered_map<std::string, std::ifstream *> open_files;
 
+//Gets a filename from the user. This is a simple helper function
 std::string get_file_name() {
     std::string input_buffer;
     std::cout << "Enter a filename:";
