@@ -92,8 +92,10 @@ void close_file(const std::string &filename) {
     }
 
     //Close the file stream and clear it from the map
-    open_files[filename]->close(); //Closes the stream
+    std::ifstream *iptr = open_files[filename]; //Get the stream pointer
+    iptr->close(); // Close the file stream
     open_files.erase(it);//Removes the registry entry
+    delete (iptr); // Free memory from stream object
     std::cout << "File " << filename << " closed" << std::endl;
 }
 
